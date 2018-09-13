@@ -41,6 +41,9 @@ router.get("/log", (req, res) => {
         return res.json({ error: "To is a Invalid Date" });
     }
 
+    /**
+     * @todo Check is the filter must be after or before query
+     */
     // return res.json(filter);
     User.findById({ _id: userId }, resultLimit)
         .then(user => {
